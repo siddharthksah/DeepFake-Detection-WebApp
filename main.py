@@ -26,15 +26,15 @@ if uploaded_file is not None:
     file_name = uploaded_file.name
     extension = file_name.split(".")[1]
 
-    if extension == "png":
+    if extension == "png" or  extension == "PNG":
         uploaded_image = Image.open(uploaded_file)
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
-    elif extension == "jpeg":
+    elif extension == "jpeg" or extension == "JPEG":
         uploaded_image = Image.open(uploaded_file)
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
-    elif extension == "jpg":
+    elif extension == "jpg" or extension == "JPG":
         # SHOW IMAGE IF JPG FORMAT
         uploaded_image = Image.open(uploaded_file)
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
