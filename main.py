@@ -18,7 +18,7 @@ st.write("""
 count = 0
 
 #upload button for the input image
-uploaded_file = st.file_uploader("Choose the image", type=['jpg', 'png'])
+uploaded_file = st.file_uploader("Choose the image to get started", type=['jpg', 'png'])
 
 if uploaded_file is not None:
 
@@ -43,7 +43,7 @@ if uploaded_file is not None:
 
 
 
-if st.button('Process Images'):
+if st.button('Process Image'):
 
     #checking if user uploaded any file
     if count == 0 :
