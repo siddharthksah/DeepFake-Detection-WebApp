@@ -1,6 +1,6 @@
 numpy
 scikit_image
 streamlit
-opencv-python
 Keras
 Pillow
+skimage
