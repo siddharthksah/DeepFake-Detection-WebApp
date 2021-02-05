@@ -55,7 +55,7 @@ if st.button('Process Image'):
 
     else:
 
-        if extension == 'jpg':
+        if extension == 'jpg' or extension == 'JPG':
 
             st.write("Processing...")
 
@@ -81,7 +81,7 @@ if st.button('Process Image'):
                 st.image('real_drake.jpg', caption="Drake approves", use_column_width=True)
 
 
-        if extension == 'jpeg':
+        if extension == 'jpeg' or extension == 'JPEG':
 
             st.write("Processing...")
 
@@ -108,7 +108,7 @@ if st.button('Process Image'):
 
 
 
-        elif extension == 'png':
+        elif extension == 'png' or extension == 'PNG':
             st.write("Processing...")
 
             np_image = uploaded_image
