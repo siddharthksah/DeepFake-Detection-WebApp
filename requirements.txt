@@ -1,6 +1,6 @@
 numpy
 tensorflow
-scikit_image
+scikit-image
 streamlit
 Keras
 Pillow
