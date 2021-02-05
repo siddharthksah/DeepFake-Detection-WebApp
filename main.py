@@ -18,7 +18,7 @@ st.write("""
 count = 0
 
 #upload button for the input image
-uploaded_file = st.file_uploader("Choose the image, please make sure the image is in the right orientation", type=['jpg', 'png', 'jpeg'])
+uploaded_file = st.file_uploader("Choose the image, please make sure the image is in the correct orientation", type=['jpg', 'png', 'jpeg'])
 
 if uploaded_file is not None:
 
