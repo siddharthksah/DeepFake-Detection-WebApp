@@ -18,7 +18,7 @@ st.write("""
 count = 0
 
 #upload button for the input image
-uploaded_file = st.file_uploader("Choose the image to get started", type=['jpg', 'png'])
+uploaded_file = st.file_uploader("Choose the image to get started", type=['jpg', 'png', 'jpeg'])
 
 if uploaded_file is not None:
 
@@ -30,13 +30,17 @@ if uploaded_file is not None:
         uploaded_image = Image.open(uploaded_file)
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
+    elif extension == "jpeg":
+        uploaded_image = Image.open(uploaded_file)
+        st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
+
     elif extension == "jpg":
         # SHOW IMAGE IF JPG FORMAT
         uploaded_image = Image.open(uploaded_file)
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
     else:
-        st.write("Please upload .JPG OR .PNG format file only!")
+        st.write("Please upload .JPG , .JPEG OR .PNG format file only!")
 
     count = count + 1
 
@@ -67,7 +71,7 @@ if st.button('Process Image'):
             st.write("The probability of this image being real is: ")
             st.write(probab)
 
-                    
+
             if probab < 0.001 :
                 st.write("which means this image is most likely fake, do not trust everything you see on the internet.")
                 st.image('fake_drake.png', caption="Drake doesn't approve", use_column_width=True)
@@ -75,6 +79,33 @@ if st.button('Process Image'):
             if probab > 0.9 :
                 st.write("which means this image is most likely real, still do not trust everything you see on the internet.")
                 st.image('real_drake.jpg', caption="Drake approves", use_column_width=True)
+
+
+        if extension == 'jpeg':
+
+            st.write("Processing...")
+
+            #preprocessing the image to use in the trained model
+            np_image = uploaded_image
+            np_image = np.array(np_image).astype('float32') / 255
+            np_image = transform.resize(np_image, (224, 224, 3))
+            np_image = np.expand_dims(np_image, axis=0)
+
+            #loading pre trained model called model.h5, you can find the code to export this on my GitHub https://github.com/siddharthksah
+            model = keras.models.load_model("model.h5")
+            probab = model.predict(np_image)[0][0]
+            st.write("The probability of this image being real is: ")
+            st.write(probab)
+
+
+            if probab < 0.001 :
+                st.write("which means this image is most likely fake, do not trust everything you see on the internet.")
+                st.image('fake_drake.png', caption="Drake doesn't approve", use_column_width=True)
+
+            if probab > 0.9 :
+                st.write("which means this image is most likely real, still do not trust everything you see on the internet.")
+                st.image('real_drake.jpg', caption="Drake approves", use_column_width=True)
+
 
 
         elif extension == 'png':
