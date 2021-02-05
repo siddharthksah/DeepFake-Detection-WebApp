@@ -1,5 +1,4 @@
 # importing the necessary packages
-import cv2
 import keras
 import numpy as np
 import streamlit as st
