@@ -1,4 +1,7 @@
 numpy
+scipy
+matplotlib
+pandas
 tensorflow
 scikit-image
 streamlit
