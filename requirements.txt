@@ -5,6 +5,6 @@ pandas
 tensorflow
 scikit-image
 streamlit
-Keras
+keras
 Pillow
 skimage
