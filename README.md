@@ -1,6 +1,6 @@
 # DeepFake-Detection-WebApp
 
-Notice --  This WebApp is now up and running on http://siddharthsah.com/deepfake It is still in beta phase, please report bugs.
+[Notice --  This WebApp is now up and running on http://siddharthsah.com/deepfake It is still in the beta phase, please report bugs.]
 
 This WebApp takes an uploaded .PNG or .JPG file as an input and classifies if the image is real or fake.
 
