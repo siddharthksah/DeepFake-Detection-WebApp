@@ -64,7 +64,7 @@ if uploaded_file is not None:
 
 
 
-if st.button('Process Image'):
+if st.button('Real or Fake?'):
 
     #checking if user uploaded any file
     if count > 0 :
