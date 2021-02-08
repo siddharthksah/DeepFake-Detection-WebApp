@@ -14,7 +14,7 @@ hide_footer_style = """
     """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
 
-st.text("[No image or URL is stored/used]")
+st.text("[No image or URL is stored/saved/used]")
 
 
 #showing header image
