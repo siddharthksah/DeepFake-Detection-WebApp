@@ -1,4 +1,7 @@
 #adding the capabilities of image URL as an input
+
+
+
 # importing the necessary packages
 import keras
 import numpy as np
@@ -22,7 +25,7 @@ st.write("""
 count = 0
 
 #upload button for the input image
-uploaded_file = st.file_uploader("Choose the image, please make sure the image is in the correct orientation for better results", type=['jpg', 'png', 'jpeg'])
+uploaded_file = st.file_uploader("Choose the image, please make sure the image is in the correct orientation", type=['jpg', 'png', 'jpeg'])
 url = ""
 url = st.text_input("Or paste the image URL here", 'https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg')
 
@@ -64,7 +67,7 @@ if uploaded_file is not None:
 
 
 
-if st.button('Real or Fake?'):
+if st.button('Process Image'):
 
     #checking if user uploaded any file
     if count > 0 :
