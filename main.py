@@ -181,3 +181,16 @@ if st.button('Real or Fake?'):
             if probab > 0.9 :
                 st.write("which means this image is most likely real, still do not trust everything you see on the internet.")
                 st.image('real_drake.jpg', caption="Drake approves", use_column_width=True)
+
+
+st.write('\n')
+st.write('\n')
+st.write('\n')
+
+st.write("""
+#### Made by Siddharth """)
+# st.markdown(
+#     """<a href="https://www.siddharthsah.com/">siddharthsah.com</a>""", unsafe_allow_html=True,
+# )
+link = '[siddharthsah.com](http://www.siddharthsah.com/)'
+st.markdown(link, unsafe_allow_html=True)
