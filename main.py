@@ -29,7 +29,7 @@ uploaded_file = st.file_uploader("Choose the image, please make sure the image i
 url = ""
 url = st.text_input("Or paste the image URL here", 'https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg')
 
-if url != "":
+if url != "https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg":
     count = count + 1
 
 
@@ -60,14 +60,15 @@ if uploaded_file is not None:
             st.write("Please upload .JPG , .JPEG OR .PNG format file only!")
 
     else:
-        response = requests.get('https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg')
-        uploaded_image = Image.open(BytesIO(response.content))
-        st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
+        pass
+        # response = requests.get('https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg')
+        # uploaded_image = Image.open(BytesIO(response.content))
+        # st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
 
 
 
-if st.button('Process Image'):
+if st.button('Real or Fake?'):
 
     #checking if user uploaded any file
     if count > 0 :
