@@ -11,6 +11,12 @@ from skimage import transform
 import requests
 from io import BytesIO
 
+hide_footer_style = """
+    <style>
+    .reportview-container .main footer {visibility: hidden;}    
+    """
+st.markdown(hide_footer_style, unsafe_allow_html=True)
+
 
 #showing header image
 st.image('./header.jpg', use_column_width=True)
