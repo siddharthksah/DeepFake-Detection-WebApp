@@ -14,6 +14,8 @@ hide_footer_style = """
     """
 st.markdown(hide_footer_style, unsafe_allow_html=True)
 
+st.text("[No image or URL is stored/used]")
+
 
 #showing header image
 st.image('./header.jpg', use_column_width=True)
@@ -28,7 +30,7 @@ st.write("""
 count = 0
 
 #upload button for the input image
-uploaded_file = st.file_uploader("Choose the image, please make sure the image is in the correct orientation for best results", type=['jpg', 'png', 'jpeg'])
+uploaded_file = st.file_uploader("Choose the image, please make sure the image is in the correct orientation", type=['jpg', 'png', 'jpeg'])
 
 if uploaded_file != None:
 
@@ -246,3 +248,4 @@ st.write("""
 # )
 link = '[siddharthsah.com](http://www.siddharthsah.com/)'
 st.markdown(link, unsafe_allow_html=True)
+
