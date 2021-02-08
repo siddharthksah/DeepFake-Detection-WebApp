@@ -1,7 +1,4 @@
 #adding the capabilities of image URL as an input
-
-
-
 # importing the necessary packages
 import keras
 import numpy as np
