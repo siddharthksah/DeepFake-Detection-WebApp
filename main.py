@@ -118,7 +118,7 @@ if st.button('Real or Fake?'):
         st.write("The probability of this image being real is: ")
         st.write(probab)
 
-        if probab < 0.001:
+        if probab < 0.05:
             st.write("which means this image is most likely fake, do not trust everything you see on the internet.")
             st.image('fake_drake.png', caption="Drake doesn't approve", use_column_width=True)
 
@@ -148,7 +148,7 @@ if st.button('Real or Fake?'):
         #probab = 0.9369558
         st.write(probab)
 
-        if probab < 0.001:
+        if probab < 0.05:
             st.write("which means this image is most likely fake, do not trust everything you see on the internet.")
             st.image('fake_drake.png', caption="Drake doesn't approve", use_column_width=True)
 
@@ -176,7 +176,7 @@ if st.button('Real or Fake?'):
             st.write(probab)
 
 
-            if probab < 0.001 :
+            if probab < 0.05 :
                 st.write("which means this image is most likely fake, do not trust everything you see on the internet.")
                 st.image('fake_drake.png', caption="Drake doesn't approve", use_column_width=True)
 
@@ -202,7 +202,7 @@ if st.button('Real or Fake?'):
             st.write(probab)
 
 
-            if probab < 0.001 :
+            if probab < 0.05 :
                 st.write("which means this image is most likely fake, do not trust everything you see on the internet.")
                 st.image('fake_drake.png', caption="Drake doesn't approve", use_column_width=True)
 
@@ -225,7 +225,7 @@ if st.button('Real or Fake?'):
             st.write("The probability of this image being real is: ")
             st.write(probab)
 
-            if probab < 0.001:
+            if probab < 0.05:
                 st.write("which means this image is most likely fake, do not trust everything you see on the internet.")
                 st.image('fake_drake.png', caption="Drake doesn't approve", use_column_width=True)
 
