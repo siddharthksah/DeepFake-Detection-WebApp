@@ -113,6 +113,7 @@ if st.button('Real or Fake?'):
         np_image = np.expand_dims(np_image, axis=0)
 
         # loading pre trained model called model.h5, you can find the code to export this on my GitHub https://github.com/siddharthksah
+        @st.cache
         model = keras.models.load_model("model.h5")
         probab = model.predict(np_image)[0][0]
         st.write("The probability of this image being real is: ")
@@ -142,6 +143,7 @@ if st.button('Real or Fake?'):
         np_image = np.expand_dims(np_image, axis=0)
 
         # loading pre trained model called model.h5, you can find the code to export this on my GitHub https://github.com/siddharthksah
+        @st.cache
         model = keras.models.load_model("model.h5")
         probab = model.predict(np_image)[0][0]
         st.write("The probability of this image being real is: ")
@@ -170,6 +172,7 @@ if st.button('Real or Fake?'):
             np_image = np.expand_dims(np_image, axis=0)
 
             #loading pre trained model called model.h5, you can find the code to export this on my GitHub https://github.com/siddharthksah
+            @st.cache
             model = keras.models.load_model("model.h5")
             probab = model.predict(np_image)[0][0]
             st.write("The probability of this image being real is: ")
@@ -196,6 +199,7 @@ if st.button('Real or Fake?'):
             np_image = np.expand_dims(np_image, axis=0)
 
             #loading pre trained model called model.h5, you can find the code to export this on my GitHub https://github.com/siddharthksah
+            @st.cache
             model = keras.models.load_model("model.h5")
             probab = model.predict(np_image)[0][0]
             st.write("The probability of this image being real is: ")
@@ -220,6 +224,7 @@ if st.button('Real or Fake?'):
             np_image = transform.resize(np_image, (224, 224, 3))
             np_image = np.expand_dims(np_image, axis=0)
 
+            @st.cache
             model = keras.models.load_model("model.h5")
             probab = model.predict(np_image)[0][0]
             st.write("The probability of this image being real is: ")
