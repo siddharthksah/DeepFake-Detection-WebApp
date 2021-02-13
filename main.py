@@ -8,6 +8,7 @@ from skimage import transform
 import requests
 from io import BytesIO
 import logging
+import tensorflow as tf
 tf.get_logger().setLevel(logging.ERROR)
 
 hide_footer_style = """
