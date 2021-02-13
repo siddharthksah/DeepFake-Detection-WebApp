@@ -252,6 +252,9 @@ if st.button('Real or Fake?'):
 
     else:
         st.write('Please refresh the page!')
+        
+    del model
+
 
 
 st.write('\n')
@@ -267,7 +270,6 @@ link = '[siddharthsah.com](http://www.siddharthsah.com/)'
 st.markdown(link, unsafe_allow_html=True)
 
 
-del model
 
 K.clear_session()
 
