@@ -14,6 +14,10 @@ import logging
 import tensorflow as tf
 tf.get_logger().setLevel(logging.ERROR)
 
+favicon = './header.jpg'
+st.beta_set_page_config(page_title='DeepFake Detector', page_icon = favicon, layout = 'wide', initial_sidebar_state = 'auto')
+# favicon being an object of the same kind as the one you should provide st.image() with (ie. a PIL array for example) or a string (url or local file path)
+
 hide_footer_style = """
     <style>
     .reportview-container .main footer {visibility: hidden;}    
