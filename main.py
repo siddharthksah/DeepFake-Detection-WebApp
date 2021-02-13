@@ -7,6 +7,8 @@ from PIL import Image
 from skimage import transform
 import requests
 from io import BytesIO
+import logging
+tf.get_logger().setLevel(logging.ERROR)
 
 hide_footer_style = """
     <style>
