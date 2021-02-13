@@ -269,7 +269,7 @@ st.write('\n')
 st.write('\n')
 
 st.write("""
-#### Made with :heart:by Siddharth """)
+#### Made with :heart: by Siddharth """)
 # st.markdown(
 #     """<a href="https://www.siddharthsah.com/">siddharthsah.com</a>""", unsafe_allow_html=True,
 # )
