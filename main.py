@@ -270,6 +270,9 @@ st.write("""
 link = '[siddharthsah.com](http://www.siddharthsah.com/)'
 st.markdown(link, unsafe_allow_html=True)
 
+from state import count_sessions
+
+st.write(count_sessions())
 
 K.clear_session()
 
