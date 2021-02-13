@@ -142,7 +142,7 @@ if st.button('Real or Fake?'):
 
     elif count == 2 :
         #st.write("Please choose a file!")
-        response = requests.get('https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg')
+        response = requests.get('https://thispersondoesnotexist.com/image')
         uploaded_image = Image.open(BytesIO(response.content))
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
