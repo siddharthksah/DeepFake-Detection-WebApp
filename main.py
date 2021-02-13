@@ -10,6 +10,7 @@ from PIL import Image
 from skimage import transform
 import requests
 from io import BytesIO
+from keras import backend as K 
 import logging
 import tensorflow as tf
 tf.get_logger().setLevel(logging.ERROR)
@@ -265,9 +266,8 @@ st.write("""
 link = '[siddharthsah.com](http://www.siddharthsah.com/)'
 st.markdown(link, unsafe_allow_html=True)
 
-from keras import backend as K 
 
-# Do some code, e.g. train and save model
+del model
 
 K.clear_session()
 
