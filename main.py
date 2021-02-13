@@ -16,11 +16,11 @@ import tensorflow as tf
 
 tf.get_logger().setLevel(logging.ERROR)
 
-with open('counter.txt') as f:
-    data = int(f.read())
-with open('counter.txt', 'w') as f:
-    f.write(str(data + 1))
-    f.close()
+# with open('counter.txt') as f:
+#     data = int(f.read())
+# with open('counter.txt', 'w') as f:
+#     f.write(str(data + 1))
+#     f.close()
 
 favicon = './favicon.png'
 st.set_page_config(page_title='DeepFake Detector', page_icon = favicon, initial_sidebar_state = 'auto')
