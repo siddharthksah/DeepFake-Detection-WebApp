@@ -13,6 +13,8 @@ from io import BytesIO
 from keras import backend as K 
 import logging
 import tensorflow as tf
+from state import count_sessions
+
 tf.get_logger().setLevel(logging.ERROR)
 
 favicon = './favicon.png'
@@ -270,6 +272,6 @@ link = '[siddharthsah.com](http://www.siddharthsah.com/)'
 st.markdown(link, unsafe_allow_html=True)
 
 
-
+st.write(count_sessions())
 K.clear_session()
 
