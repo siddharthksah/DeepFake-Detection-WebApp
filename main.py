@@ -54,9 +54,9 @@ if uploaded_file != None:
 #st.write(uploaded_file)
 
 url = ""
-url = st.text_input("Or paste the image URL here", 'https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg')
+url = st.text_input("Or paste the image URL here", 'https://thispersondoesnotexist.com/image')
 
-if url != "https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg":
+if url != "https://thispersondoesnotexist.com/image":
     count = count + 1
 else:
     count = count + 2
@@ -96,7 +96,7 @@ if uploaded_file is not None:
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
     elif count == 2:
-        response = requests.get('https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg')
+        response = requests.get('https://thispersondoesnotexist.com/image')
         uploaded_image = Image.open(BytesIO(response.content))
         st.image(uploaded_image, caption='Uploaded Image', use_column_width=True)
 
