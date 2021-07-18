@@ -22,7 +22,7 @@ tf.get_logger().setLevel(logging.ERROR)
 #     f.write(str(data + 1))
 #     f.close()
 
-favicon = './favicon.png'
+favicon = './icon.png'
 st.set_page_config(page_title='DeepFake Detector', page_icon = favicon, initial_sidebar_state = 'auto')
 # favicon being an object of the same kind as the one you should provide st.image() with (ie. a PIL array for example) or a string (url or local file path)
 
